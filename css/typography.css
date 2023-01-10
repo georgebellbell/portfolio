@@ -32,6 +32,11 @@ body {
   font-weight: 500;
 }
 
+.bolded {
+  font-size:16px;
+  font-weight: bold;
+}
+
 .project-card-text {
   overflow: hidden;
   text-overflow: ellipsis;
