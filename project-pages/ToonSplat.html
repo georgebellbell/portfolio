@@ -60,9 +60,9 @@
             - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
             - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
           -->
-        <div class="main-title">Planet Play</div>
-        <div class="body-text">A 3D planet jumping game with physics similar to Super Mario Galaxy. Each planet has a different goal to accomplish from avoiding an AI opponent, dodging meteors or collecting flocking enemies.</div>
-        <image class="project-header-image" src="../assets/images/Planet Play.jfif">
+        <div class="main-title">ToonSplat</div>
+        <div class="body-text">A third person shooter inspired by the Splatoon Franchise and developed in a small team (In active development)</div>
+        <image class="project-header-image" src="../assets/images/ToonSplat.png">
       </div>
       
      
@@ -78,12 +78,24 @@
       <div id="project-details">
         <div class="subheader-text">Project Details</div>
         <div class="project-details-content">
-          <div class="body-text">Completed during my third year using the game engine Unity, I developed a multi-leveled and progressable 3D planet jumping game. I achieved a grade of 88% for this project.</div>
-          <div class="body-text">Rather than using all of the physics system provided by Unity, I decided to challenge myself by implementing my own method for gravity to replicate the feel of one of my favourite games, Super Mario Galaxy, with small planets you can run completely around.</div>
-          <div class="body-text">This project allowed me to explore several different concepts and features for the game. There were different planets in the game with different challenges on each, which in addition to different sizes and masses, creates a unique experience on each level via a planet class system. Due to the unique level design of the spherical worlds, the basic navmesh and pathfinding used by Unity would not work so I develop my own pathfinding system that used A* in combination with node generation across the surface of the planet to give intelligence to certain opponents.</div>
-          <div class="body-text">Through this project I was able to experiment with different UI and developed a deep interest in the ways it can be applied. Examples of this include the 3D main menu, the planet navigation map to select which level you want to play, and a dynamic healthbar system</div>
-          
-          <a class="button" href="https://github.com/georgebellbell/Planet-Play">
+          <div class="body-text">For a team project in my final year, I have been working in a team of 8 people to develop a Splatoon style shooter.</div>
+          <div class="body-text">The main objective of the game is to cover as much of the floor in your teams paint colour before the time runs out. It includes a myriad of features:</div>
+          <ul> 
+            <li>Dynamic painting</li>
+            <li>Online multiplayer</li>
+            <li>Up to 4 player local play, done via split screen</li>
+            <li>Minimap, scorebar and other UI elements</li>
+          </ul>
+          <div class="bolded">What I developed</div>
+          <div class="body-text">My main role focused around Graphics and UI, handling a lot of the rendering and visuals of the game, as well as presenting key information to the player. Here are some of the features I developed:</div>
+          <ul> 
+            <li>Developed the visuals of the painting effect and how they are drawn to the screen</li>
+            <li>Minimap, uses an orphagraphic camera, simplistic renditions of environment colours and meshes, to give a top down perspective of the game.</li>
+            <li>Split screen, renders the scene from different perspectives and presents them all to the screen</li>
+            <li>Calculating the scores for each team to be presented in a scorbar at the top of the screen</li>
+          </ul>
+          <div class="body-text">This project has provided me a great many opportunities to explore areas of game development that interest me, from gameplay to graphics and UI. The UI elements I was able to develop were particularly interesting to me, and is something I would look to develop further in the future.</div>
+          <a class="button" href="https://github.com/ToonSplat/CSC8508">
             <span class="button-text">Code Repository</span>
           </a>
         </div>
@@ -94,48 +106,29 @@
         <!-- TODO - Change the 'subheader-text' to whatever you want the Gallery section header to say -->
         <div class="subheader-text">Image Gallery</div>
         <div class="project-gallery-content">
-            <!-- 
-              TODO
-
-              This is where the images in the gallery live. Here's a simple gallery image for you to copy:
-
-              Full Width Image:
-
-                <div class="gallery-image-container">
-                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
-                  <span class="image-caption">IMAGE_CAPTION</span>
-                </div>
-
-              Half Width Image: 
-
-                <div class="gallery-image-container half-width">
-                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
-                  <span class="image-caption">IMAGE_CAPTION</span>
-                </div>
-
-              - To add an image to the this area, copy one of the above, paste it below this comment, and change the following:
-                  - IMAGE_NAME: the name of the image file in assets/images
-                  - IMAGE_CAPTION: to the caption of the image
-            -->
             <div class="gallery-image-container half-width">
-              <img src="../assets/images/planet-1.jpg" class="gallery-image">
-              <span class="image-caption">Main menu. Player can move around the menu planet before they start.</span>
+              <img src="../assets/images/Single Player.png" class="gallery-image">
+              <span class="image-caption">Single player game, has top down minimap to help navigate.</span>
             </div>
             <div class="gallery-image-container half-width">
-              <img src="../assets/images/planet-2.jpg" class="gallery-image">
-              <span class="image-caption">Level selection. Uses pathinding to draw a path of levels to complete</span>
+              <img src="../assets/images/Settings.png" class="gallery-image">
+              <span class="image-caption">A settings screen to tailor gameplay to the user</span>
             </div>
             <div class="gallery-image-container">
-              <img src="../assets/images/planet-3.jpg" class="gallery-image">
-              <span class="image-caption">Planet where you must collect all roaming enemies, which move using flocking logic.</span>
+              <img src="../assets/images/4 Player.png" class="gallery-image">
+              <span class="image-caption">Up to four people can play locally via split screen</span>
             </div>
             <div class="gallery-image-container">
-              <img src="../assets/images/planet-4.jpg" class="gallery-image">
-              <span class="image-caption">Level where player is chased by an AI and has been caught too many times.</span>
+              <img src="../assets/images/Painted.png" class="gallery-image">
+              <span class="image-caption">Both other players and the environment can be painted</span>
             </div>
+           
         </div>
       </div>
+      <div class="bolded">A video is currently in development and will be released closer to the games completion</div>
     </div>
+
+    
 
     <!-- FOOTER -->
     <div id="footer">
