@@ -90,21 +90,29 @@
           <div class="body-text">My main role focused around Graphics and UI, handling a lot of the rendering and visuals of the game, as well as presenting key information to the player. Here are some of the features I developed:</div>
           <ul> 
             <li>Developed the visuals of the painting effect and how they are drawn to the screen</li>
-            <li>Minimap, uses an orphagraphic camera, simplistic renditions of environment colours and meshes, to give a top down perspective of the game.</li>
-            <li>Split screen, renders the scene from different perspectives and presents them all to the screen</li>
-            <li>Calculating the scores for each team to be presented in a scorbar at the top of the screen</li>
+            <li>Split screen, renders the scene from different perspectives and presents them all to the screen, up to and including 4 players</li>
+            <li>Calculating each teams score by updating a map texture when paintballs impact through the use of the GPU and atomics.</li>
+            <li>Generating a minimap by sampling the map texture with the up to date splats</li>
           </ul>
+          <div class="body-text">I also had the opportunity to improve rendering and optimise performance with the use of features like uniform buffer objects and bindless textures</div>
           <div class="body-text">This project has provided me a great many opportunities to explore areas of game development that interest me, from gameplay to graphics and UI. The UI elements I was able to develop were particularly interesting to me, and is something I would look to develop further in the future.</div>
           <a class="button" href="https://github.com/ToonSplat/CSC8508">
             <span class="button-text">Code Repository</span>
           </a>
         </div>
       </div>
-
+      <div id="project-gallery">
+      <div class="subheader-text">Gameplay Video</div>
+      <video width="640" height="480" controls>
+        <source src="../assets/ToonSplat.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+      </div>
       <!-- IMAGE GALLERY -->
       <div id="project-gallery">
         <!-- TODO - Change the 'subheader-text' to whatever you want the Gallery section header to say -->
         <div class="subheader-text">Image Gallery</div>
+        <div class="body-text">The following images show the game half way through development and I think it is important to show it in its unfinished state, as well as how the final game looked:</div>
         <div class="project-gallery-content">
             <div class="gallery-image-container half-width">
               <img src="../assets/images/Single Player.png" class="gallery-image">
@@ -114,18 +122,38 @@
               <img src="../assets/images/Settings.png" class="gallery-image">
               <span class="image-caption">A settings screen to tailor gameplay to the user</span>
             </div>
-            <div class="gallery-image-container">
-              <img src="../assets/images/4 Player.png" class="gallery-image">
-              <span class="image-caption">Up to four people can play locally via split screen</span>
-            </div>
+            
             <div class="gallery-image-container">
               <img src="../assets/images/Painted.png" class="gallery-image">
               <span class="image-caption">Both other players and the environment can be painted</span>
             </div>
            
         </div>
+
+        <div class="body-text">These images show the game at the end of development with updated assets, textures and gameplay systems:</div>
+
+        <div class="project-gallery-content">
+          <div class="gallery-image-container">
+            <img src="../assets/images/loading bar.jpg" class="gallery-image">
+            <span class="image-caption">Game now has a fun loading screen while assets are loaded in</span>
+          </div>
+          <div class="gallery-image-container half-width">
+            <img src="../assets/images/single v AI.jpg" class="gallery-image">
+            <span class="image-caption">Single player game, playing against an AI. Has a minimap to help navigate.</span>
+          </div>
+          <div class="gallery-image-container half-width">
+            <img src="../assets/images/settings updated.jpg" class="gallery-image">
+            <span class="image-caption">Added more setting options to help customise the user's experience</span>
+          </div>
+          <div class="gallery-image-container">
+            <img src="../assets/images/4 player improved.jpg" class="gallery-image">
+            <span class="image-caption">Updated look for four player game with dynamic lighting to reflect the winning team</span>
+          </div>
+          
+         
       </div>
-      <div class="bolded">A video is currently in development and will be released closer to the games completion</div>
+      </div>
+      
     </div>
 
     
