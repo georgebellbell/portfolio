@@ -113,44 +113,12 @@ body {
       object-position: center;
     }
 
-
-/* Game Section */
-
-#game-section {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.game-container {
-  display: flex;
-  gap: 40px 80px;
-  flex-wrap: wrap;
-}
-
-    /* Project Cards */
-
-    .game-card {
-      max-width: calc((100% - 32px) / 3);
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-
-    .game-card-text-container {
-      flex-direction: column;
-      display: flex;
-      gap: 80px
-    }
-
-    .game-image {
+    .game-image{
       width: 100%;
-      height: 250px;
+      height: 230px;
       object-fit: cover;
       object-position: center;
     }
-
-
 
 
 /* Project Pages */
