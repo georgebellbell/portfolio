@@ -3,16 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 
-    <!-- 
-      TODO
-
-      Upload your Unemployable (or whatever photo you like) to the assets/images folder
-      and change the name of the image below to match the uploaded one
-
-      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
-
-      This should be the same across all pages.
-     -->
     <link rel="icon" href="./assets/images/profilepic.jpg" />
 		<title>George Bell</title>
     <meta name="description" content="A portfolio by George Bell.">
@@ -25,243 +15,59 @@
 		<script defer src="./js/script.js"></script>
 	</head>
 	<body>
-    <!-- NAVBAR -->
-    <div class="navbar">
-      <a class="nav-title-link" href="./index.html">
-        <!-- TODO - Change the "Portfolio Title" to whatever you want displayed in the top left -->
-        <span class="nav-title">George Bell's Portfolio</span>
-         <!-- TODO - Change the email after 'mailto:' to your email address for contact -->
-        <a class="button" href="./assets/CV.pdf" target="_blank">
-          <span class="button-text">My CV</span>
-        </a>
-        <a class="button" href="https://georgebell.journoportfolio.com/#/">
-          <span class="button-text">Journalism</span>
-        </a>
-        <a class="button" href="https://open.spotify.com/show/6m9xBYZO9byo5nD5vNJZTC?si=bd007dff02394453">
-          <span class="button-text">Podcast</span>
-        </a>
-        <a class="button" href="mailto:georgebell.com@gmail.com">
-          <span class="button-text">Contact Me</span>
-        </a>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a class="nav-title-link" href="./index.html">
+      <span class="nav-title">George Bell</span>
+    </a>
+    <a class="button" href="./project-pages/PhD.html">
+      <span class="button-text">PhD / Research</span>
+    </a>
+    <a class="button" href="./project-pages/GameDev.html">
+      <span class="button-text">Game Development</span>
+    </a>
+    <a class="button" href="mailto:georgebell.com@gmail.com">
+      <span class="button-text">Contact Me</span>
+    </a>
+  </div>
 
-      </a>
-    </div>
+  <!-- MAIN PAGE CONTENT -->
+  <div id="main-content">
 
-    <!-- MAIN PAGE CONTENT -->
-    <div id="main-content">
-
-      <!-- PORTFOLIO HEADER -->
-      <div id="portfolio-header">
-        <div id="portfolio-header-image-container">
-          <!-- 
-            TODO
-
-            - Change the img "src" attribute to point to the Unemployable image you uploaded (or whatever image).
-            - Change the number to point to your Unemployable & replace the OpenSea link with your own
-            - If you aren't using an Unemployable as your image, remove the entire "a" element
-          -->
-          <img src="./assets/images/profilepic.jpg" class="portfolio-header-image">
-          <a class="no-underline" target="_blank" href="https://opensea.io/assets/0xe0be388ab81c47b0f098d2030a1c9ef190691a8a/1311">
-            <span class="image-caption">This is a photo of me</span>
-          </a>
-        </div>
-
-          <!-- 
-            TODO
-
-            - Change the main-title to whatver you want
-            - Change the body-text after that to a quick introduction to what you do
-            - Edit the button text if you feel like it. It will link to the projects section below.
-          -->
-        <div id="portfolio-header-text-container">
-            <div class="header-text">
-              <span class="main-title">Hey, I'm George!</span>
-              <div class="body-text">I’m a PhD Candidate at Newcastle University, exploring immersive data visualisation.</div>
-            </div>
-            <a class="button" id="my-work-link">
-              <span class="button-text">Check out my projects</span> 
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-        </div>
+    <!-- PORTFOLIO HEADER -->
+    <div id="portfolio-header">
+      <div id="portfolio-header-image-container">
+        <img src="./assets/images/profilepic.jpg" class="portfolio-header-image" alt="Photo of George Bell" style="width: 200px; height: 200px; border-radius: 50%; border: 4px solid var(--main-accent); box-shadow: 0 2px 12px rgba(0,0,0,0.07);">
       </div>
-
-      <!-- ABOUT SECTION -->
-      <!-- 
-        TODO
-
-        - Change the subheader-text to whatever header you want
-        - Add paragraphs using the <div class="body-text"></div> elements in the "about-section-content"
-      -->
-      <div id="about-section">
-        <span class="subheader-text">About Me</span>
-        <div class="about-section-content">
-          <div class="body-text">Hello World! My name is George and I am a games programmer with experience using languages like C# and C++. I graduated from Newcastle University with a 1st Class Masters in Computing with a specialism in Game Engineering.</div>
-          <div class="body-text">I am passionate not only about science and technology, but the arts as well with a deep love of games and films. In all the work I do I try to approach it from an original and unorthadox angle. It may not always work but I'm grateful for everything I am able to learn through the mistakes I make.</div>
-          <div cass="body-text">Alongside programming and game development, I am an avid journalist and film critic, writing for multiple publications about all manner of things. Through this critical analysis of media, I've developed a creative flair with the work I do and try to use it wherever and whenever I can!</div>
+      <div id="portfolio-header-text-container">
+        <div class="header-text">
+          <span class="main-title" style="color: var(--main-accent); font-size: 2.2rem; font-weight: bold;">Hey, I'm George!</span>
+          <div class="body-text" style="font-size: 1.15rem;">I’m a PhD Candidate at Newcastle University, exploring immersive data visualisation.</div>
         </div>
-      </div>
-
-      <div id="my-work-section">
-        <!-- TODO - Change the subheader-text to whatever you want the Projects section header to say -->
-        <span class="subheader-text">Published Games</span>
-
-        <div class="projects-container">
-          <div class="project-card">
-            <a href="https://www.wolfandwood.co/#RNRHome">
-              <img src="./assets/images/rnr.jpg" class="game-image" >
-            </a>
-
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Hotel R'n'R</div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <a href="https://csmashvrs.com/">
-              <img src="./assets/images/c-smash.jpg" class="game-image" >
-            </a>
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">C-Smash VRS</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- PROJECTS / MY WORK SECTION -->
-      <div id="my-work-section">
-        <!-- TODO - Change the subheader-text to whatever you want the Projects section header to say -->
-        <span class="subheader-text">Personal Projects</span>
-
-        <div class="projects-container">
-          <div class="project-card">
-            <img src="./assets/images/ToonSplat.png" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">ToonSplat</div>
-              <div class="body-text project-card-text">Team Project to develop a splatoon style third-person shooter</div>
-            </div>
-            <a class="button" href="./project-pages/ToonSplat.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-
-          <div class="project-card">
-            <img src="./assets/images/Goat Immitator.jpg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Goat Imitator</div>
-              <div class="body-text project-card-text">Iterated on a physics engine in C++ to make a multiplayer game with advanced AI and a myriad of other features</div>
-            </div>
-            <a class="button" href="./project-pages/goat-imitator.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-
-          <div class="project-card">
-            <img src="./assets/images/Fantasy World.jpg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Fantasy World</div>
-              <div class="body-text project-card-text">Used understanding of the rasteriser to create a 3D graphical scene from the ground up</div>
-            </div>
-            <a class="button" href="./project-pages/fantasy-world.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-
-          <div class="project-card">
-            <img src="./assets/images/Python Game.jpg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Learning Python Game</div>
-              <div class="body-text project-card-text">Created as part of an internship, an interactive game that teaches the basics of python</div>
-            </div>
-            <a class="button" href="./project-pages/python-game.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-
-          <div class="project-card">
-            <img src="./assets/images/Reflection Dissertation.png" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Reflections Dissertation</div>
-              <div class="body-text project-card-text">15k word report comparing and analysing several different graphical reflection techniques while independently learning C++</div>
-            </div>
-            <a class="button" href="./project-pages/diss-3.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-
-          <div class="project-card">
-            <img src="./assets/images/Planet Play.jfif" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Planet Play</div>
-              <div class="body-text project-card-text">3D planet hopping game with Mario Galaxy style physics</div>
-            </div>
-            <a class="button" href="./project-pages/planet-play.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-
-          <div class="project-card">
-            <img src="./assets/images/island.jpg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">The Island</div>
-              <div class="body-text project-card-text">Made use of Unity's plethra of tools and some shader language code to create a 3D world to be explored</div>
-            </div>
-            <a class="button" href="./project-pages/the-island.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-
-          <div class="project-card">
-            <img src="./assets/images/doorbell.jfif" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Facial Recognition Doorbell</div>
-              <div class="body-text project-card-text">Lead a team project to create a Rasperry Pi based smart doorbell that used facial recognition and a camera to let you know who is at the door via an android app</div>
-            </div>
-            <a class="button" href="./project-pages/doorbell.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-
-        </div>
+        <a class="button" id="my-work-link" href="#my-work-section">
+          <span class="button-text">Check out my projects</span>
+          <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow icon" style="vertical-align: middle; margin-left: 6px; height: 1em;">
+        </a>
       </div>
     </div>
 
-    <!-- FOOTER -->
-    <div id="footer">
-      
-      <!-- 
-        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
-      
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" target="_blank" href="https://twitter.com/George__Bell">
-        <image src="./assets/icons/twitter.svg" class="footer-icon"/>
-      </a>
-      <!-- 
-        TODO - Change the email after "mailto" to your contact email 
-      
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" href="mailto:georgebell.com@gmail.com">
-        <image src="./assets/icons/mail.svg" class="footer-icon"/>
-      </a>
+    <hr class="soft-divider">
 
-      <a class="icon-link" href="https://github.com/georgebellbell">
-        <image src="./assets/icons/github.svg" class="footer-icon"/>
-      </a>
-
-      <a class="icon-link" href="https://www.linkedin.com/in/george-bell-uk/">
-        <image src="./assets/icons/linkedin.svg" class="footer-icon"/>
-      </a>
+    <!-- ABOUT SECTION -->
+    <div id="about-section">
+      <span class="subheader-text">About Me</span>
+      <div class="about-section-content">
+        <div class="body-text">Hello World! My name is George and I am a games programmer with experience using languages like C# and C++. I graduated from Newcastle University with a 1st Class Masters in Computing with a specialism in Game Engineering.</div>
+        <div class="body-text">I am passionate not only about science and technology, but the arts as well with a deep love of games and films. In all the work I do I try to approach it from an original and unorthodox angle. It may not always work but I'm grateful for everything I am able to learn through the mistakes I make.</div>
+        <div class="body-text">Alongside programming and game development, I am an avid journalist and film critic, writing for multiple publications about all manner of things. Through this critical analysis of media, I've developed a creative flair with the work I do and try to use it wherever and whenever I can!</div>
+      </div>
     </div>
 
-	</body>
+    <hr class="soft-divider">
+
+    <!-- Projects/Updates section will go here in the future -->
+
+  </div>
+</body>
+<!-- ...existing code... -->
 </html>

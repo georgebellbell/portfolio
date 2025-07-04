@@ -13,25 +13,67 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--main-bg);
+  color: var(--main-text);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  min-height: 100vh;
+  padding-top: 120px;
 }
 
-
-
+:root {
+  --main-bg: #f4f7fb;
+  --main-accent: #c0392b;
+  --main-accent-dark: #922b21;
+  --main-text: #22304a;
+  --card-bg: #ffffff;
+  --divider: #c0392b;
+}
 
 /* Main Page Layout */
-
 #main-content {
-  margin: 225px 425px;
+  background: var(--card-bg);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+  max-width: 950px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 96px;
 }
 
-
-
+/* Responsive horizontal margins only */
+@media only screen and (max-width: 1600px) {
+  #main-content {
+    margin: 40px 60px 0 60px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  #main-content {
+    margin: 32px 24px 0 24px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #main-content {
+    margin: 24px 8px 0 8px;
+  }
+  #portfolio-header {
+    flex-direction: column;
+  }
+  .project-card {
+    max-width: calc((100% - 16px) / 2);
+  }
+}
+@media only screen and (max-width: 600px) {
+  #main-content {
+    margin: 12px 2px 0 2px;
+  }
+  .project-card {
+    max-width: 100%;
+  }
+}
 
 /* Portfolio Header */
-
 #portfolio-header {
   display: flex;
   gap: 20px;
@@ -57,11 +99,7 @@ body {
   flex-basis: 50%;
 }
 
-
-
-
 /* About Section */
-
 #about-section {
   display: flex;
   flex-direction: column;
@@ -74,11 +112,7 @@ body {
   gap: 34px;
 }
 
-
-
-
 /* Project Section */
-
 #my-work-section {
   display: flex;
   flex-direction: column;
@@ -87,42 +121,124 @@ body {
 
 .projects-container {
   display: flex;
-  gap: 34px 16px;
   flex-wrap: wrap;
+  gap: 34px 16px;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-    /* Project Cards */
+/* Project Cards */
+.project-card-link {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  min-width: 220px;
+  aspect-ratio: 1 / 1;
+  flex: 1 1 220px;
+  position: relative;
+}
 
-    .project-card {
-      max-width: calc((100% - 32px) / 3);
-      display: flex;
-      flex-direction: column;
-      gap: 34px;
-    }
+.project-card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  color: #22304a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-    .project-card-text-container {
-      flex-direction: column;
-      display: flex;
-      gap: 16px
-    }
+/* Default: relative positioning for text container (for cards WITHOUT images) */
+.project-card-text-container {
+  width: 100%;
+  padding: 28px 20px;
+  background: rgba(255,255,255,0.95);
+  text-align: center;
+  z-index: 2;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: auto;
+}
 
-    .project-image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      object-position: center;
-    }
+/* If card has an image, overlay text at the bottom */
+.project-card-link[data-image] .project-card-text-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(255,255,255,0.85);
+  width: 100%;
+  padding: 24px 16px;
+}
 
-    .game-image{
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      object-position: center;
-    }
+/* Project card with image background: JS sets background-image inline on .project-card */
 
+/* Project Titles and Text */
+.project-title {
+  color: var(--main-accent);
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.body-text {
+  font-size: 1rem;
+  color: #22304a;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Project Images (if you want to use <img> inside cards elsewhere) */
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.game-image {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.subheader-text {
+  color: var(--main-accent);
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.project-card:hover, .project-card-link:focus .project-card {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(192,57,43,0.15);
+}
+
+/* Only change background color on hover if there is NO image */
+.project-card-link:not([data-image]) .project-card:hover,
+.project-card-link:not([data-image]):focus .project-card {
+  background: #c03a2b5d;
+}
 
 /* Project Pages */
-
 #project-header {
   display: flex;
   flex-direction: column;
@@ -146,83 +262,77 @@ body {
   gap: 34px;
 }
 
-    /* Project Gallery */
-
-    #project-gallery {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .project-gallery-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 34px 16px;
-    }
-
-    .gallery-image-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .gallery-image-container.half-width {
-      width: calc((100% - 16px) / 2);
-    }
-
-    .gallery-image {
-      width: 100%;
-      height: auto;
-    }
-
-
-/* Extra Extra large devices (large laptops and desktops, 1200px and below) */
-@media only screen and (max-width: 1600px) {
-  #main-content {
-    margin: 225px 275px;
-  }
+/* Project Gallery */
+#project-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and below) */
-@media only screen and (max-width: 1200px) {
-  #main-content {
-    margin: 225px 175px;
-  }
+.project-gallery-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px 16px;
 }
 
-/* Large devices (laptops/desktops, 1000px and below) */
-@media only screen and (max-width: 1000px) {
-  #main-content {
-    margin: 225px 75px;
-  }
+.gallery-image-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-/* Small devices (portrait tablets and large phones, 800px and below) */
-@media only screen and (max-width: 800px) {
-  #main-content {
-    margin: 150px 50px;
-  }
-
-  #portfolio-header {
-    flex-direction: column;
-  }
-
-  .project-card {
-    max-width: calc((100% - 16px) / 2);
-  }
+.gallery-image-container.half-width {
+  width: calc((100% - 16px) / 2);
 }
 
-/* Small devices (portrait tablets and large phones, 600px and below) */
-@media only screen and (max-width: 600px) {
-  #main-content {
-    margin: 125px 20px;
-  }
-
-  .project-card {
-    max-width: 100%;
-  }
+.gallery-image {
+  width: 100%;
+  height: auto;
 }
 
+/* Navbar Styles */
+.navbar {
+  background: var(--card-bg);
+  border-bottom: 2px solid var(--main-accent);
+  padding: 18px 0;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
 
+.nav-title {
+  color: var(--main-accent);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 
+.button, .button:visited {
+  background: var(--main-accent);
+  color: var(--main-text);
+  border-radius: 8px;
+  padding: 8px 18px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+  border: none;
+  margin-left: 8px;
+}
+
+.button:hover, .button:focus {
+  background: var(--main-accent-dark);
+  outline: 2px solid var(--main-text);
+}
+
+/* Soft Divider */
+.soft-divider {
+  border: none;
+  border-top: 2px solid var(--main-accent);
+  margin: 32px 0;
+}
