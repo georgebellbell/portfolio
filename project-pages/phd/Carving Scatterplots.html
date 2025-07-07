@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Immersive Data Visualisation in VR – George Bell</title>
+  <title>Carving Scatterplots – George Bell</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="../assets/images/profilepic.jpg" />
   <link rel="stylesheet" href="../../css/layout.css">
   <link rel="stylesheet" href="../../css/typography.css">
   <link rel="stylesheet" href="../../css/utilities.css">
+
 </head>
 <body>
   <!-- NAVBAR -->
@@ -15,7 +16,7 @@
     <a class="nav-title-link" href="../../index.html">
       <span class="nav-title">George Bell</span>
     </a>
-    <a class="button" href="../../PhD.html">
+    <a class="button" href="../PhD.html">
       <span class="button-text">PhD / Research</span>
     </a>
     <a class="button" href="mailto:georgebell.com@gmail.com">
@@ -24,21 +25,55 @@
   </div>
 
   <div id="main-content">
-  <!-- PROJECT HEADER -->
-  <div id="portfolio-header" style="align-items: center; flex-direction: column;">
-    <span class="main-title" style="color: var(--main-accent); font-size: 2rem; font-weight: bold; width: 100%; text-align: center; margin-bottom: 18px; display: block;">
-      Carving Scatterplots
-    </span>
-    <div id="portfolio-header-text-container">
-      <div class="header-text">
-        <div class="body-text" style="font-size: 1.05rem; text-align: center;">
-          Online Demo Made in Unity
+    <!-- PROJECT HEADER -->
+    <div id="portfolio-header" style="align-items: center; flex-direction: column;">
+      <span class="main-title" style="color: var(--main-accent); font-size: 2rem; font-weight: bold; width: 100%; text-align: center; margin-bottom: 18px; display: block;">
+        Carving Scatterplots
+      </span>
+      <div id="portfolio-header-text-container">
+        <div class="header-text">
+          <div class="body-text" style="font-size: 1.05rem; text-align: center;">
+            Online Demo Made in Unity
+          </div>
         </div>
+      </div>
+    </div>
+
+    <hr class="soft-divider">
+
+    <!-- UNITY DEMO -->
+    <div class="unity-demo-card">
+      <div id="unity-container">
+        <canvas id="unity-canvas"></canvas>
       </div>
     </div>
   </div>
 
-    <hr class="soft-divider">
+  <script>
+    var buildUrl = "CarvingPlotBuild"; // adjust path if needed
+    var loaderUrl = buildUrl + "/Web.loader.js";
+    var config = {
+      dataUrl: buildUrl + "/Web.data",
+      frameworkUrl: buildUrl + "/Web.framework.js",
+      codeUrl: buildUrl + "/Web.wasm",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "Newcastle University",
+      productName: "Carving Scatterplots",
+      productVersion: "1.0",
+    };
 
+    var script = document.createElement("script");
+    script.src = loaderUrl;
+    script.onload = () => {
+      createUnityInstance(document.querySelector("#unity-canvas"), config)
+        .then((unityInstance) => {
+          console.log("Unity loaded");
+        })
+        .catch((message) => {
+          alert(message);
+        });
+    };
+    document.body.appendChild(script);
+  </script>
 </body>
 </html>
