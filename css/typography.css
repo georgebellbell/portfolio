@@ -1,5 +1,16 @@
+p {
+  margin-top: 0;
+  margin-bottom: 0em; /* or 0.75em if you want it tighter */
+  line-height: 1.6;    /* keeps good readability */
+}
+
+.body-text p {
+  margin-bottom: 0.75em;
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom:  0;
 }
 
 .nav-title {

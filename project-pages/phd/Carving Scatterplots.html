@@ -32,7 +32,7 @@
       </span>
       <div id="portfolio-header-text-container">
         <div class="header-text">
-          <div class="body-text" style="font-size: 1.05rem; text-align: center;">
+          <div class="subheader-text" style="font-size: 1.05rem; text-align: center;">
             Online Demo Made in Unity
           </div>
         </div>
@@ -40,17 +40,43 @@
     </div>
 
     <hr class="soft-divider">
-
+    <p class="body-text">Web Based Scatterplot Carving Demo. Created using Unity3D and WebGL.</p>
+    <ul class="body-text">
+      <li>Experiment 1 allows manipulation of noise and a single cluster.</li>
+      <li>Experiment 2 allows manipulation of two clusters.</li>
+    </ul>
     <!-- UNITY DEMO -->
     <div class="unity-demo-card">
       <div id="unity-container">
         <canvas id="unity-canvas"></canvas>
       </div>
     </div>
+    <p class="subheader-text"><b>Controls</b></p>
+
+    <ul class="body-text">
+      <li><b>Tab</b> - Switch between <b>Exocentric</b> and <b>Egocentric</b> navigation.</li>
+      <li><b>Left Click</b> - Enter Navigation mode and explore the scatterplot.</li>
+      <li><b>Right Click</b> - Enter Editing mode and manipulate the clusters/noise.</li>
+      <li><b>R</b> - Reset scatterplot and camera back to initial position.</li>
+      <li><b>F</b> - Toggle Fullscreen.</li>
+      <li><b>Escape</b> - Exit the current mode.</li>
+
+    </ul>
+    <p class="body-text"><b>Exocentric Specific</b></p>
+    <ul class="body-text">
+      <li><b>WASD</b> - Rotate Scatterplot</li>
+      <li><b>Scroll Wheel</b> - Zoom in and out towards the plot.</li>
+    </ul>
+
+    <p class="body-text"><b>Egocentric Specific</b></p>
+    <ul class="body-text">
+      <li><b>WASD</b> - Move through the scatterplot, within its bounds.</li>
+      <li><b>Mouse movement</b> - Look around plot.</li>
+    </ul>
   </div>
 
   <script>
-    var buildUrl = "CarvingPlotBuild"; // adjust path if needed
+    var buildUrl = "CarvingPlotBuild"; 
     var loaderUrl = buildUrl + "/Web.loader.js";
     var config = {
       dataUrl: buildUrl + "/Web.data",
@@ -75,5 +101,9 @@
     };
     document.body.appendChild(script);
   </script>
+
+      
+
+
 </body>
 </html>
