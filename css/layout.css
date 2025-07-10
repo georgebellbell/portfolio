@@ -39,7 +39,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 96px;
+  gap: 20px;
 }
 
 /* Responsive horizontal margins only */
@@ -202,6 +202,7 @@ body {
   color: #22304a;
   line-height: 1.6;
   margin-bottom: 0;
+  font-weight: 500;
 }
 
 /* Project Images (if you want to use <img> inside cards elsewhere) */
