@@ -1,80 +1,46 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-    <!-- 
-      TODO
-
-      Upload your Unemployable (or whatever photo you like) to the assets/images folder
-      and change the name of the image below to match the uploaded one
-
-      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
-
-      This should be the same across all pages.
-     -->
-     <link rel="icon" href="../assets/images/profilepic.jpg" />
-     <title>George Bell</title>
-    <meta name="description" content="A portfolio by George Bell.">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-		<link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/typography.css">
-    <link rel="stylesheet" href="../css/utilities.css">
-
-		<script defer src="../js/script.js"></script>
-	</head>
+<head>
+  <meta charset="UTF-8" />
+  <title>CustomRP – George Bell</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../assets/images/profilepic.jpg" />
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/typography.css">
+  <link rel="stylesheet" href="../../css/utilities.css">
+</head>
 	<body>
-    <!-- NAVBAR -->
-    <div class="navbar">
-      <a class="nav-title-link" href="../index.html">
-        <!-- 
-          TODO - Change the "Portfolio Title" to whatever you want displayed in the top left
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a class="nav-title-link" href="../../index.html">
+      <span class="nav-title">George Bell</span>
+    </a>
+        <a class="button" href="../GameDev.html">
+      <span class="button-text">Game Development</span>
+    </a>
 
-          (this should be the same across all pages)
-         -->
-        <span class="nav-title">George Bell's Portfolio</span>
-        <!-- 
-          TODO - Change the email after 'mailto:' to your email address for contact 
-        
-          (this should be the same across all pages)
-        -->
-        <a class="button" href="../assets/CV.pdf" target="_blank">
-          <span class="button-text">My CV</span>
-        </a>
-        <a class="button" href="mailto:georgebell.com@gmail.com">
-          <span class="button-text">Contact Me</span>
-        </a>
-      </a>
-    </div>
 
-    <!-- MAIN PAGE CONTENT -->
+    <a class="button" href="mailto:georgebell.com@gmail.com">
+      <span class="button-text">Contact Me</span>
+    </a>
+  </div>
+
     <div id="main-content">
+    <div id="portfolio-header" style="align-items: center; flex-direction: column;">
+      <span class="main-title" style="color: var(--main-accent); font-size: 2rem; font-weight: bold; width: 100%; text-align: center; margin-bottom: 18px; display: block;">
+        ToonSplat
+      </span>
+      <div id="portfolio-header-text-container">
+        <div class="header-text">
+          <div class="subheader-text" style="font-size: 1.05rem; text-align: center;">
+            A third person shooter inspired by the Splatoon Franchise and developed in a small team
+          </div>
+        </div>
+      <image class="project-header-image" src="../../assets/images/ToonSplat.png">
 
-      <!-- PROJECT HEADER -->
-      <div id="project-header">
-          <!-- 
-            TODO
-
-            - Change the 'main-title' text to the name of your project
-            - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
-            - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
-          -->
-        <div class="main-title">ToonSplat</div>
-        <div class="body-text">A third person shooter inspired by the Splatoon Franchise and developed in a small team (In active development)</div>
-        <image class="project-header-image" src="../assets/images/ToonSplat.png">
       </div>
-      
-     
-
-
-      <!-- PROJECT DETAILS -->
-      <!-- 
-        TODO
-
-        - Change the 'subheader-text' to whatever header you want for project details
-        - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
-      -->
+    </div>
       <div id="project-details">
         <div class="subheader-text">Project Details</div>
         <div class="project-details-content">
@@ -104,7 +70,7 @@
       <div id="project-gallery">
       <div class="subheader-text">Gameplay Video</div>
       <video width="640" height="480" controls>
-        <source src="../assets/ToonSplat.mp4" type="video/mp4">
+        <source src="../../assets/ToonSplat.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video>
       </div>
@@ -115,16 +81,16 @@
         <div class="body-text">The following images show the game half way through development and I think it is important to show it in its unfinished state, as well as how the final game looked:</div>
         <div class="project-gallery-content">
             <div class="gallery-image-container half-width">
-              <img src="../assets/images/Single Player.png" class="gallery-image">
+              <img src="../../assets/images/Single Player.png" class="gallery-image">
               <span class="image-caption">Single player game, has top down minimap to help navigate.</span>
             </div>
             <div class="gallery-image-container half-width">
-              <img src="../assets/images/Settings.png" class="gallery-image">
+              <img src="../../assets/images/Settings.png" class="gallery-image">
               <span class="image-caption">A settings screen to tailor gameplay to the user</span>
             </div>
             
             <div class="gallery-image-container">
-              <img src="../assets/images/Painted.png" class="gallery-image">
+              <img src="../../assets/images/Painted.png" class="gallery-image">
               <span class="image-caption">Both other players and the environment can be painted</span>
             </div>
            
@@ -134,19 +100,19 @@
 
         <div class="project-gallery-content">
           <div class="gallery-image-container">
-            <img src="../assets/images/loading bar.jpg" class="gallery-image">
+            <img src="../../assets/images/loading bar.jpg" class="gallery-image">
             <span class="image-caption">Game now has a fun loading screen while assets are loaded in</span>
           </div>
           <div class="gallery-image-container half-width">
-            <img src="../assets/images/single v AI.jpg" class="gallery-image">
+            <img src="../../assets/images/single v AI.jpg" class="gallery-image">
             <span class="image-caption">Single player game, playing against an AI. Has a minimap to help navigate.</span>
           </div>
           <div class="gallery-image-container half-width">
-            <img src="../assets/images/settings updated.jpg" class="gallery-image">
+            <img src="../../assets/images/settings updated.jpg" class="gallery-image">
             <span class="image-caption">Added more setting options to help customise the user's experience</span>
           </div>
           <div class="gallery-image-container">
-            <img src="../assets/images/4 player improved.jpg" class="gallery-image">
+            <img src="../../assets/images/4 player improved.jpg" class="gallery-image">
             <span class="image-caption">Updated look for four player game with dynamic lighting to reflect the winning team</span>
           </div>
           
@@ -158,34 +124,21 @@
 
     
 
-    <!-- FOOTER -->
-    <div id="footer">
+  <div id="footer">
   
-    <!-- 
-      TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
-    
-      This should be the same across all pages.
-    -->
-    <a class="icon-link" target="_blank" href="https://twitter.com/George__Bell">
-      <image src="../assets/icons/twitter.svg" class="footer-icon"/>
-    </a>
-    <!-- 
-      TODO - Change the email after "mailto" to your contact email 
-    
-      This should be the same across all pages.
-    -->
     <a class="icon-link" href="mailto:georgebell.com@gmail.com">
-      <image src="../assets/icons/mail.svg" class="footer-icon"/>
+      <image src="../../assets/icons/mail.svg" class="footer-icon"/>
     </a>
 
     <a class="icon-link" href="https://github.com/georgebellbell">
-      <image src="../assets/icons/github.svg" class="footer-icon"/>
+      <image src="../../assets/icons/github.svg" class="footer-icon"/>
     </a>
 
     <a class="icon-link" href="https://www.linkedin.com/in/george-bell-uk/">
-      <image src="../assets/icons/linkedin.svg" class="footer-icon"/>
+      <image src="../../assets/icons/linkedin.svg" class="footer-icon"/>
     </a>
   </div>
+
 
 	</body>
 </html>

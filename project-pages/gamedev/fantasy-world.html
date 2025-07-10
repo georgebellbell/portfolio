@@ -13,59 +13,53 @@
 
       This should be the same across all pages.
      -->
-     <link rel="icon" href="../assets/images/profilepic.jpg" />
+     <link rel="icon" href="../../assets/images/profilepic.jpg" />
      <title>George Bell</title>
     <meta name="description" content="A portfolio by George Bell.">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/typography.css">
-    <link rel="stylesheet" href="../css/utilities.css">
+		<link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/utilities.css">
 
-		<script defer src="../js/script.js"></script>
+		<script defer src="../../js/script.js"></script>
 	</head>
 	<body>
     <!-- NAVBAR -->
-    <div class="navbar">
-      <a class="nav-title-link" href="../index.html">
-        <!-- 
-          TODO - Change the "Portfolio Title" to whatever you want displayed in the top left
+  <div class="navbar">
+    <a class="nav-title-link" href="../../index.html">
+      <span class="nav-title">George Bell</span>
+    </a>
+    <a class="button" href="../GameDev.html">
+      <span class="button-text">Game Development</span>
+    </a>
 
-          (this should be the same across all pages)
-         -->
-        <span class="nav-title">George Bell's Portfolio</span>
-        <!-- 
-          TODO - Change the email after 'mailto:' to your email address for contact 
-        
-          (this should be the same across all pages)
-        -->
-        <a class="button" href="../assets/CV.pdf" target="_blank">
-          <span class="button-text">My CV</span>
-        </a>
-        <a class="button" href="mailto:georgebell.com@gmail.com">
-          <span class="button-text">Contact Me</span>
-        </a>
-      </a>
-    </div>
+
+    <a class="button" href="mailto:georgebell.com@gmail.com">
+      <span class="button-text">Contact Me</span>
+    </a>
+  </div>
 
     <!-- MAIN PAGE CONTENT -->
     <div id="main-content">
 
       <!-- PROJECT HEADER -->
-      <div id="project-header">
-          <!-- 
-            TODO
 
-            - Change the 'main-title' text to the name of your project
-            - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
-            - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
-          -->
-        <div class="main-title">Fantasy World</div>
-        <div class="body-text">Created entirely using C++ and GLSL, this is a 3D world that uses split screen and a moving camera</div>
-        <image class="project-header-image" src="../assets/images/Fantasy World.jpg">
+          <div id="portfolio-header" style="align-items: center; flex-direction: column;">
+      <span class="main-title" style="color: var(--main-accent); font-size: 2rem; font-weight: bold; width: 100%; text-align: center; margin-bottom: 18px; display: block;">
+        Fantasy World
+      </span>
+      <div id="portfolio-header-text-container">
+        <div class="header-text">
+          <div class="subheader-text" style="font-size: 1.05rem; text-align: center;">
+            Created entirely using C++ and GLSL, this is a 3D world that uses split screen and a moving camera
+          </div>
+        </div>
       </div>
-      
-     
+      <image class="project-header-image" src="../../assets/images/Fantasy World.jpg">
+
+    </div>
+
 
 
       <!-- PROJECT DETAILS -->
@@ -85,7 +79,7 @@
             <span class="button-text">Code Repository</span>
           </a>
 
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/vnUKGwSMdJY" frameborder="0" allowfullscreen></iframe>
+          <iframe width="560" height="315"  src="https://www.youtube.com/embed/vnUKGwSMdJY" frameborder="0" allowfullscreen></iframe>
       </iframe>
         </div>
       </div>
@@ -95,39 +89,16 @@
         <!-- TODO - Change the 'subheader-text' to whatever you want the Gallery section header to say -->
         <div class="subheader-text">Image Gallery</div>
         <div class="project-gallery-content">
-            <!-- 
-              TODO
-
-              This is where the images in the gallery live. Here's a simple gallery image for you to copy:
-
-              Full Width Image:
-
-                <div class="gallery-image-container">
-                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
-                  <span class="image-caption">IMAGE_CAPTION</span>
-                </div>
-
-              Half Width Image: 
-
-                <div class="gallery-image-container half-width">
-                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
-                  <span class="image-caption">IMAGE_CAPTION</span>
-                </div>
-
-              - To add an image to the this area, copy one of the above, paste it below this comment, and change the following:
-                  - IMAGE_NAME: the name of the image file in assets/images
-                  - IMAGE_CAPTION: to the caption of the image
-            -->
             <div class="gallery-image-container half-width">
-              <img src="../assets/images/fantasy-1.jpg" class="gallery-image">
+              <img src="../../assets/images/fantasy-1.jpg" class="gallery-image">
               <span class="image-caption">Reflective water.</span>
             </div>
             <div class="gallery-image-container half-width">
-              <img src="../assets/images/fantasy-2.jpg" class="gallery-image">
+              <img src="../../assets/images/fantasy-2.jpg" class="gallery-image">
               <span class="image-caption">Two post processing effects: split screen and fog.</span>
             </div>
             <div class="gallery-image-container">
-              <img src="../assets/images/fantasy-3.jpg" class="gallery-image">
+              <img src="../../assets/images/fantasy-3.jpg" class="gallery-image">
               <span class="image-caption">Multi-textured terrain, tree meshes and shadowmapping.</span>
             </div>
         </div>
@@ -135,33 +106,19 @@
     </div>
 
     <!-- FOOTER -->
-    <div id="footer">
+  <div id="footer">
   
-    <!-- 
-      TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
-    
-      This should be the same across all pages.
-    -->
-    <a class="icon-link" target="_blank" href="https://twitter.com/George__Bell">
-      <image src="../assets/icons/twitter.svg" class="footer-icon"/>
-    </a>
-    <!-- 
-      TODO - Change the email after "mailto" to your contact email 
-    
-      This should be the same across all pages.
-    -->
     <a class="icon-link" href="mailto:georgebell.com@gmail.com">
-      <image src="../assets/icons/mail.svg" class="footer-icon"/>
+      <image src="../../assets/icons/mail.svg" class="footer-icon"/>
     </a>
 
     <a class="icon-link" href="https://github.com/georgebellbell">
-      <image src="../assets/icons/github.svg" class="footer-icon"/>
+      <image src="../../assets/icons/github.svg" class="footer-icon"/>
     </a>
 
     <a class="icon-link" href="https://www.linkedin.com/in/george-bell-uk/">
-      <image src="../assets/icons/linkedin.svg" class="footer-icon"/>
+      <image src="../../assets/icons/linkedin.svg" class="footer-icon"/>
     </a>
   </div>
-
 	</body>
 </html>

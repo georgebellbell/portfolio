@@ -247,8 +247,10 @@ body {
 }
 
 .project-header-image {
-  width: 100%;
+  width: 80%;
   height: auto;
+  margin: auto;
+  display: block;
 }
 
 #project-details {

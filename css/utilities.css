@@ -10,6 +10,7 @@
 .footer-icon {
   width: 20px;
   height: 20px;
+  color: #c0392b
 }
 
 a.icon-link {
@@ -38,7 +39,7 @@ a.icon-link:hover {
 }
 
 .nav-title-link {
-  color: black;
+  color: #c0392b;
   text-decoration: none;
 }
 
@@ -90,7 +91,7 @@ a.button:hover {
 /* Link Styling */
 a.no-underline {
   text-decoration: none;
-  color: black
+  color: #c0392b
 }
 
 a.no-underline:hover {

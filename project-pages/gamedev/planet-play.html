@@ -1,80 +1,47 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-    <!-- 
-      TODO
-
-      Upload your Unemployable (or whatever photo you like) to the assets/images folder
-      and change the name of the image below to match the uploaded one
-
-      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
-
-      This should be the same across all pages.
-     -->
-     <link rel="icon" href="../assets/images/profilepic.jpg" />
-     <title>George Bell</title>
-    <meta name="description" content="A portfolio by George Bell.">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-		<link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/typography.css">
-    <link rel="stylesheet" href="../css/utilities.css">
-
-		<script defer src="../js/script.js"></script>
-	</head>
+<head>
+  <meta charset="UTF-8" />
+  <title>Planet Play – George Bell</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../assets/images/profilepic.jpg" />
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/typography.css">
+  <link rel="stylesheet" href="../../css/utilities.css">
+</head>
 	<body>
-    <!-- NAVBAR -->
-    <div class="navbar">
-      <a class="nav-title-link" href="../index.html">
-        <!-- 
-          TODO - Change the "Portfolio Title" to whatever you want displayed in the top left
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a class="nav-title-link" href="../../index.html">
+      <span class="nav-title">George Bell</span>
+    </a>
+        <a class="button" href="../GameDev.html">
+      <span class="button-text">Game Development</span>
+    </a>
 
-          (this should be the same across all pages)
-         -->
-        <span class="nav-title">George Bell's Portfolio</span>
-        <!-- 
-          TODO - Change the email after 'mailto:' to your email address for contact 
-        
-          (this should be the same across all pages)
-        -->
-        <a class="button" href="../assets/CV.pdf" target="_blank">
-          <span class="button-text">My CV</span>
-        </a>
-        <a class="button" href="mailto:georgebell.com@gmail.com">
-          <span class="button-text">Contact Me</span>
-        </a>
-      </a>
-    </div>
+
+    <a class="button" href="mailto:georgebell.com@gmail.com">
+      <span class="button-text">Contact Me</span>
+    </a>
+  </div>
 
     <!-- MAIN PAGE CONTENT -->
     <div id="main-content">
+      <div id="portfolio-header" style="align-items: center; flex-direction: column;">
+        <span class="main-title" style="color: var(--main-accent); font-size: 2rem; font-weight: bold; width: 100%; text-align: center; margin-bottom: 18px; display: block;">
+          Planet Play
+        </span>
+        <div id="portfolio-header-text-container">
+          <div class="header-text">
+            <div class="subheader-text" style="font-size: 1.05rem; text-align: center;">
+A 3D planet jumping game with physics similar to Super Mario Galaxy. Each planet has a different goal to accomplish from avoiding 
+an AI opponent, dodging meteors or collecting flocking enemies. 
+          </div>
+          <image class="project-header-image" src="../../assets/images/Planet Play.jfif">
 
-      <!-- PROJECT HEADER -->
-      <div id="project-header">
-          <!-- 
-            TODO
-
-            - Change the 'main-title' text to the name of your project
-            - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
-            - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
-          -->
-        <div class="main-title">Planet Play</div>
-        <div class="body-text">A 3D planet jumping game with physics similar to Super Mario Galaxy. Each planet has a different goal to accomplish from avoiding an AI opponent, dodging meteors or collecting flocking enemies.</div>
-        <image class="project-header-image" src="../assets/images/Planet Play.jfif">
+        </div>
       </div>
-      
-     
-
-
-      <!-- PROJECT DETAILS -->
-      <!-- 
-        TODO
-
-        - Change the 'subheader-text' to whatever header you want for project details
-        - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
-      -->
       <div id="project-details">
         <div class="subheader-text">Project Details</div>
         <div class="project-details-content">
@@ -94,43 +61,20 @@
         <!-- TODO - Change the 'subheader-text' to whatever you want the Gallery section header to say -->
         <div class="subheader-text">Image Gallery</div>
         <div class="project-gallery-content">
-            <!-- 
-              TODO
-
-              This is where the images in the gallery live. Here's a simple gallery image for you to copy:
-
-              Full Width Image:
-
-                <div class="gallery-image-container">
-                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
-                  <span class="image-caption">IMAGE_CAPTION</span>
-                </div>
-
-              Half Width Image: 
-
-                <div class="gallery-image-container half-width">
-                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
-                  <span class="image-caption">IMAGE_CAPTION</span>
-                </div>
-
-              - To add an image to the this area, copy one of the above, paste it below this comment, and change the following:
-                  - IMAGE_NAME: the name of the image file in assets/images
-                  - IMAGE_CAPTION: to the caption of the image
-            -->
             <div class="gallery-image-container half-width">
-              <img src="../assets/images/planet-1.jpg" class="gallery-image">
+              <img src="../../assets/images/planet-1.jpg" class="gallery-image">
               <span class="image-caption">Main menu. Player can move around the menu planet before they start.</span>
             </div>
             <div class="gallery-image-container half-width">
-              <img src="../assets/images/planet-2.jpg" class="gallery-image">
-              <span class="image-caption">Level selection. Uses pathinding to draw a path of levels to complete</span>
+              <img src="../../assets/images/planet-2.jpg" class="gallery-image">
+              <span class="image-caption">Level selection. Uses pathfinding to draw a path of levels to complete</span>
             </div>
             <div class="gallery-image-container">
-              <img src="../assets/images/planet-3.jpg" class="gallery-image">
+              <img src="../../assets/images/planet-3.jpg" class="gallery-image">
               <span class="image-caption">Planet where you must collect all roaming enemies, which move using flocking logic.</span>
             </div>
             <div class="gallery-image-container">
-              <img src="../assets/images/planet-4.jpg" class="gallery-image">
+              <img src="../../assets/images/planet-4.jpg" class="gallery-image">
               <span class="image-caption">Level where player is chased by an AI and has been caught too many times.</span>
             </div>
         </div>
@@ -138,31 +82,18 @@
     </div>
 
     <!-- FOOTER -->
-    <div id="footer">
+  <div id="footer">
   
-    <!-- 
-      TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
-    
-      This should be the same across all pages.
-    -->
-    <a class="icon-link" target="_blank" href="https://twitter.com/George__Bell">
-      <image src="../assets/icons/twitter.svg" class="footer-icon"/>
-    </a>
-    <!-- 
-      TODO - Change the email after "mailto" to your contact email 
-    
-      This should be the same across all pages.
-    -->
     <a class="icon-link" href="mailto:georgebell.com@gmail.com">
-      <image src="../assets/icons/mail.svg" class="footer-icon"/>
+      <image src="../../assets/icons/mail.svg" class="footer-icon"/>
     </a>
 
     <a class="icon-link" href="https://github.com/georgebellbell">
-      <image src="../assets/icons/github.svg" class="footer-icon"/>
+      <image src="../../assets/icons/github.svg" class="footer-icon"/>
     </a>
 
     <a class="icon-link" href="https://www.linkedin.com/in/george-bell-uk/">
-      <image src="../assets/icons/linkedin.svg" class="footer-icon"/>
+      <image src="../../assets/icons/linkedin.svg" class="footer-icon"/>
     </a>
   </div>
 
