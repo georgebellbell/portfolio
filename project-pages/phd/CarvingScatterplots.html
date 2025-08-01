@@ -45,23 +45,34 @@
       <li>Experiment 1 allows manipulation of noise and a single cluster.</li>
       <li>Experiment 2 allows manipulation of two clusters.</li>
     </ul>
-        <hr class="soft-divider">
+    <hr class="soft-divider">
 
-    <!-- UNITY DEMO -->
-    <div class="unity-demo-card">
-      <div id="unity-container">
-        <canvas id="unity-canvas"></canvas>
+    <!-- TOGGLE BUTTONS -->
+    <div style="margin-bottom: 1em; text-align: center;">
+      <button onclick="showDemo(1)" id="toggle-btn-1" class="button active">Full Demo</button>
+      <button onclick="showDemo(2)" id="toggle-btn-2" class="button">Simple Demo</button>
+    </div>
+
+    <!-- UNITY DEMO 1 -->
+    <div class="unity-demo-card" id="unity-demo-1">
+      <div id="unity-container-1">
+        <canvas id="unity-canvas-1"></canvas>
       </div>
     </div>
-    <p class="subheader-text"><b>Controls</b></p>
+    <!-- UNITY DEMO 2 -->
+    <div class="unity-demo-card" id="unity-demo-2" style="display:none;">
+      <div id="unity-container-2">
+        <canvas id="unity-canvas-2"></canvas>
+      </div>
+    </div>
 
+    <p class="subheader-text"><b>Controls</b></p>
     <ul class="body-text">
       <li><b>Tab</b> - Switch between <b>Exocentric</b> and <b>Egocentric</b> navigation.</li>
       <li><b>Right Click on point</b> - Change colour of point.</li>
       <li><b>R</b> - Reset scatterplot and camera back to initial position.</li>
       <li><b>F</b> - Toggle Fullscreen.</li>
       <li><b>Escape</b> - Exit the current mode.</li>
-
     </ul>
     <p class="body-text"><b>Exocentric Specific</b></p>
     <ul class="body-text">
@@ -78,34 +89,68 @@
   </div>
 
   <script>
-    var buildUrl = "../../assets/CarvingBuild/CarvingPlotBuild"; 
-    var loaderUrl = buildUrl + "/Web.loader.js";
-    var config = {
-      dataUrl: buildUrl + "/Web.data",
-      frameworkUrl: buildUrl + "/Web.framework.js",
-      codeUrl: buildUrl + "/Web.wasm",
+    function showDemo(num) {
+      document.getElementById('unity-demo-1').style.display = num === 1 ? '' : 'none';
+      document.getElementById('unity-demo-2').style.display = num === 2 ? '' : 'none';
+      document.getElementById('toggle-btn-1').classList.toggle('active', num === 1);
+      document.getElementById('toggle-btn-2').classList.toggle('active', num === 2);
+    }
+
+    // Load Full Demo
+    var buildUrl1 = "../../assets/CarvingBuild/CarvingPlotBuild";
+    var loaderUrl1 = buildUrl1 + "/Web.loader.js";
+    var config1 = {
+      dataUrl: buildUrl1 + "/Web.data",
+      frameworkUrl: buildUrl1 + "/Web.framework.js",
+      codeUrl: buildUrl1 + "/Web.wasm",
       streamingAssetsUrl: "../../assets/CarvingBuild/StreamingAssets",
       companyName: "Newcastle University",
       productName: "Carving Scatterplots",
       productVersion: "1.0",
     };
 
-    var script = document.createElement("script");
-    script.src = loaderUrl;
-    script.onload = () => {
-      createUnityInstance(document.querySelector("#unity-canvas"), config)
+    var script1 = document.createElement("script");
+    script1.src = loaderUrl1;
+    script1.onload = () => {
+      createUnityInstance(document.querySelector("#unity-canvas-1"), config1)
         .then((unityInstance) => {
-          console.log("Unity loaded");
+          console.log("Unity 1 loaded");
         })
         .catch((message) => {
           alert(message);
         });
     };
-    document.body.appendChild(script);
+    document.body.appendChild(script1);
+
+    // Load Simple Demo
+    var buildUrl2 = "../../assets/SimpleCarvingBuild/CarvingPlotBuild";
+    var loaderUrl2 = buildUrl2 + "/SimpleWeb.loader.js";
+    var config2 = {
+      dataUrl: buildUrl2 + "/SimpleWeb.data",
+      frameworkUrl: buildUrl2 + "/SimpleWeb.framework.js",
+      codeUrl: buildUrl2 + "/SimpleWeb.wasm",
+      streamingAssetsUrl: "../../assets/SimpleCarvingBuild/StreamingAssets",
+      companyName: "Newcastle University",
+      productName: "Carving Scatterplots Simple",
+      productVersion: "1.0",
+    };
+
+    var script2 = document.createElement("script");
+    script2.src = loaderUrl2;
+    script2.onload = () => {
+      createUnityInstance(document.querySelector("#unity-canvas-2"), config2)
+        .then((unityInstance) => {
+          console.log("Unity 2 loaded");
+        })
+        .catch((message) => {
+          alert(message);
+        });
+    };
+    document.body.appendChild(script2);
+
+    // Optional: highlight first button on load
+    showDemo(1);
   </script>
-
-      
-
 
 </body>
 </html>

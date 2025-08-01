@@ -333,6 +333,13 @@ body {
   outline: 2px solid var(--main-text);
 }
 
+.button.active {
+  background: var(--main-accent-dark);
+  color: #fff;
+  outline: 2px solid var(--main-accent);
+  box-shadow: 0 2px 8px rgba(192,57,43,0.10);
+}
+
 /* Soft Divider */
 .soft-divider {
   border: none;
@@ -357,7 +364,7 @@ body {
       align-items: center;
       width: 100%;
     }
-    #unity-canvas {
+    #unity-canvas-1 {
       border-radius: 12px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.10);
       background: #222;
@@ -367,6 +374,17 @@ body {
       max-height: 70vh;
       display: block;
     }
+    #unity-canvas-2 {
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+      background: #222;
+      width: 960px;
+      height: 600px;
+      max-width: 100%;
+      max-height: 70vh;
+      display: block;
+    }
+
     @media (max-width: 1000px) {
       #unity-canvas {
         width: 100vw;
