@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GD Contest</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../assets/images/profilepic.jpg" />
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/typography.css">
+  <link rel="stylesheet" href="../../css/utilities.css">
+ <link rel="stylesheet" href="../../assets/GDContest/styles.css">
+    <!-- import map for JavaScript module handling -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "../../assets/GDContest/lib/threejs/three.module.min.js",
+                "three/addons/": "../../assets/GDContest/lib/threejs/addons/"
+            }
+        }
+    </script>
+
+    <!-- external JavaScript reference -->
+    <script type="module" src="../../assets/GDContest/scripts.js"></script>
+
+</head>
+<body>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a class="nav-title-link" href="../../index.html">
+      <span class="nav-title">George Bell</span>
+    </a>
+    <a class="button" href="../PhD.html">
+      <span class="button-text">PhD / Research</span>
+    </a>
+    <a class="button" href="mailto:georgebell.com@gmail.com">
+      <span class="button-text">Contact Me</span>
+    </a>
+  </div>
+
+  <div id="main-content">
+    <!-- PROJECT HEADER -->
+    <div id="portfolio-header" style="align-items: center; flex-direction: column;">
+      <span class="main-title" style="color: var(--main-accent); font-size: 2rem; font-weight: bold; width: 100%; text-align: center; margin-bottom: 18px; display: block;">
+        GD Contest - Dark
+      </span>
+      <div id="portfolio-header-text-container">
+        <div class="header-text">
+          <div class="subheader-text" style="font-size: 1.05rem; text-align: center;">
+            Storyline Visualisation of Dark TV Show
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="soft-divider">
+    <p class="body-text">Storyline visualisation of the German TV show Dark for the <a href = https://mozart.diei.unipg.it/gdcontest/2025/creative/> Graph Drawing Contest</a>.</p>
+
+    <p class="body-text">Created by <a href="https://visva.cs.uni-koeln.de/en/team/m-sc-tom-baumgartl">Tom Baumgartl</a>, <a href="https://blogs.ncl.ac.uk/nova/luke-watkin/">Luke Watkin</a> and <a href="https://blogs.ncl.ac.uk/nova/george-bell/">George Bell</a></p>
+
+    <canvas id="threejs-canvas"></canvas>
+</body>
+</html>
