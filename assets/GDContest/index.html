@@ -1,0 +1,36 @@
+<!--
+    Filename: index.html
+    Description: Cylindrical display preview.
+
+    Version: 2024.11    
+    Author: Nico Reski
+    GitHub: https://github.com/nicoversity
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Nico Reski">
+        <title>Cylindrical Display Preview</title>
+
+        <!-- external style sheet reference -->
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- import map for JavaScript module handling -->
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "./lib/threejs/three.module.min.js",
+                    "three/addons/": "./lib/threejs/addons/"
+				}
+			}
+		</script>
+
+        <!-- external JavaScript reference -->
+        <script type="module" src="scripts.js"></script>
+    </head>
+    
+    <body>
+        <canvas id="threejs-canvas"></canvas>
+    </body>
+</html>

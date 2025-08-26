@@ -1,0 +1,17 @@
+/*
+ *  Filename: styles.css
+ *  Description: Appearance configuration the cylindrical display preview.
+ *
+ *  Version: 2024.11
+ *  Author: Nico Reski
+ *  GitHub: https://github.com/nicoversity
+ */
+
+body {
+    margin: 20px;
+}
+
+#threejs-canvas {
+    display: block;
+    margin: 0 auto;
+}
