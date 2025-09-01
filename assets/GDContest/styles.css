@@ -10,12 +10,21 @@
 /* body {
     margin: 200px;
 } */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
 
 #threejs-canvas {
     display: block;
-    margin: auto; /* adjust top margin as needed */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
     border: none;
-    background: transparent;
-    max-width: 1300px;
-    width: 100%;
+    z-index: 1;
 }
