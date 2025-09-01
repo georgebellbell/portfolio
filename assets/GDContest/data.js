@@ -15,7 +15,7 @@
 const CylindricalDisplayData = [
     {
         // test/reference image, dividing the cylindrical 360 space into eight equally sized sections; Nico Reski
-        textureUrl: "../../assets/GDContest/public/FINAL.png"
+        textureUrl: "../../assets/GDContest/public/FINAL_VERSION.png"
     }
 ];
 

@@ -76,29 +76,19 @@ document.addEventListener("keydown", function(event){
         UpdateCdPreviewForIndex(displayedTextureIndex);
     }
 });
-document.addEventListener("DOMContentLoaded", function(){
-    const canvasWidth = Math.min(window.innerWidth - htmlBodyMargin * 2, 1000);
-    const canvasHeight = canvasWidth / 2;
 
-    CDSceneConfig.canvas.width = canvasWidth;
-    CDSceneConfig.canvas.height = canvasHeight;
-
-    CdSceneInit();
-});
 // automatically invoked every time the browser window is resized
 window.addEventListener("resize", function(event){
-    // set max width and maintain aspect ratio
-    const canvasWidth = Math.min(window.innerWidth - htmlBodyMargin * 2, 700); // max 1000px
-    const canvasHeight = canvasWidth / 2; // maintain 2:1 ratio
-
-    CDSceneConfig.canvas.width = canvasWidth;
-    CDSceneConfig.canvas.height = canvasHeight;
+    // override sizes
+    CDSceneConfig.canvas.width = window.innerWidth - htmlBodyMargin * 2;
+    CDSceneConfig.canvas.height = window.innerHeight - htmlBodyMargin * 2;
 
     // update Three.js camera and renderer
-    camera.aspect = canvasWidth / canvasHeight;
+    camera.aspect = CDSceneConfig.canvas.width / CDSceneConfig.canvas.height;
     camera.updateProjectionMatrix();
-    renderer.setSize(canvasWidth, canvasHeight);
+    renderer.setSize(CDSceneConfig.canvas.width, CDSceneConfig.canvas.height);
 });
+
 // === THREEJS IMPLEMENTATION ===
 // global scene variables
 let scene = null;
@@ -251,21 +241,7 @@ function BuildScene()
         canvas: canvas,
         antialias: true
     });
-
-    
-    //renderer.setSize(CDSceneConfig.canvas.width, CDSceneConfig.canvas.height);
-
-    // quick fix for “too wide” canvas
-const canvasWidth = Math.min(window.innerWidth, 1300);  // max width
-const canvasHeight = canvasWidth / 2;                   // maintain 2:1 aspect ratio
-
-canvas.width = canvasWidth;
-canvas.height = canvasHeight;
-
-renderer.setSize(canvasWidth, canvasHeight);
-camera.aspect = canvasWidth / canvasHeight;
-camera.updateProjectionMatrix();
-
+    renderer.setSize(CDSceneConfig.canvas.width, CDSceneConfig.canvas.height);
     renderer.render(scene, camera);
 
     // --- clock ---
