@@ -10,8 +10,8 @@
 // configuration related to the Three.js scene
 const CylindricalDisplaySceneConfig = {
     canvas : {
-        width: 1280,
-        height: 720
+        width: 2280,
+        height: 1440
     },
     camera : {
         fov: 45,
@@ -28,7 +28,7 @@ const CylindricalDisplaySceneConfig = {
             z: 0
         }
     },
-    background: 0xdeebf7
+    background: 0x242323
 };
 
 // configuration related to the cylindrical display

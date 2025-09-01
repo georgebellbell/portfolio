@@ -15,11 +15,7 @@
 const CylindricalDisplayData = [
     {
         // test/reference image, dividing the cylindrical 360 space into eight equally sized sections; Nico Reski
-        textureUrl: "../../assets/GDContest/public/cd_360_eighths-12288x1200px.png"
-    },
-    {
-        // 3D scene rendered with equirectangular projection (cylindrical equidistant projection); created using Unity; Nico Reski
-        textureUrl: "../../assets/GDContest/public/unity_3d_test-4096x400px.png"
+        textureUrl: "../../assets/GDContest/public/FINAL.png"
     }
 ];
 

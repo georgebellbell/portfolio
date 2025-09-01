@@ -28,7 +28,9 @@ body {
   --card-bg: #ffffff;
   --divider: #c0392b;
 }
-
+body.gdcontest-bg {
+  --main-bg: #242323; 
+}
 /* Main Page Layout */
 #main-content {
   background: var(--card-bg);
@@ -142,7 +144,7 @@ body {
 .project-card {
   width: 100%;
   aspect-ratio: 1 / 1;
-  background: #fff;
+  background: #d48c8c;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.10);
   color: #22304a;

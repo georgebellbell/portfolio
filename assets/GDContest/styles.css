@@ -7,11 +7,15 @@
  *  GitHub: https://github.com/nicoversity
  */
 
-body {
-    margin: 20px;
-}
+/* body {
+    margin: 200px;
+} */
 
 #threejs-canvas {
     display: block;
-    margin: 0 auto;
+    margin: auto; /* adjust top margin as needed */
+    border: none;
+    background: transparent;
+    max-width: 1300px;
+    width: 100%;
 }

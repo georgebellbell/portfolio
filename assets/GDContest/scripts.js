@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function(){
 // automatically invoked every time the browser window is resized
 window.addEventListener("resize", function(event){
     // set max width and maintain aspect ratio
-    const canvasWidth = Math.min(window.innerWidth - htmlBodyMargin * 2, 800); // max 1000px
+    const canvasWidth = Math.min(window.innerWidth - htmlBodyMargin * 2, 700); // max 1000px
     const canvasHeight = canvasWidth / 2; // maintain 2:1 ratio
 
     CDSceneConfig.canvas.width = canvasWidth;
@@ -99,7 +99,6 @@ window.addEventListener("resize", function(event){
     camera.updateProjectionMatrix();
     renderer.setSize(canvasWidth, canvasHeight);
 });
-
 // === THREEJS IMPLEMENTATION ===
 // global scene variables
 let scene = null;
@@ -257,7 +256,7 @@ function BuildScene()
     //renderer.setSize(CDSceneConfig.canvas.width, CDSceneConfig.canvas.height);
 
     // quick fix for “too wide” canvas
-const canvasWidth = Math.min(window.innerWidth, 850);  // max width
+const canvasWidth = Math.min(window.innerWidth, 1300);  // max width
 const canvasHeight = canvasWidth / 2;                   // maintain 2:1 aspect ratio
 
 canvas.width = canvasWidth;
