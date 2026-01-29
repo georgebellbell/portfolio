@@ -7,7 +7,7 @@
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
     <canvas id="unity-canvas" width=960 height=600 tabindex="-1" style="width: 960px; height: 600px; background: #231F20"></canvas>
-    <script src="../../assets/DichopticBuild/Build/DichopticBuild.loader.js"></script>
+    <script src="../../assets/DichopticBuild/Build/Web Build.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
@@ -25,9 +25,9 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "../../assets/DichopticBuild/Build/DichopticBuild.data",
-        frameworkUrl: "../../assets/DichopticBuild/Build/DichopticBuild.framework.js",
-        codeUrl: "../../assets/DichopticBuild/Build/DichopticBuild.wasm",
+        dataUrl: "../../assets/DichopticBuild/Build/Web Build.data",
+        frameworkUrl: "../../assets/DichopticBuild/Build/Web Build.framework.js",
+        codeUrl: "../../assets/DichopticBuild/Build/Web Build.wasm",
         streamingAssetsUrl: "../../assets/DichopticBuild/StreamingAssets",
         companyName: "George Bell",
         productName: "DichopticOpacityPrototype",
